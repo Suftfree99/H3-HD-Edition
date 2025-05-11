@@ -1,5 +1,5 @@
 Mod for 32-bit graphics from the HD Edition remaster + fixes + AI
-- fixed crash during map generation.
+- Fixed crash during map generation.
 /// Detailed information about the mod:
 WoG Graphics Fix is ​​now built in (over 500 new objects on the adventure map).
 - A mod that expands the number of battlefields to 327 variations of the battlefield in HD quality. 157 of them are mirror images of fields. (To work, you need to enable the script for new battlefields).
