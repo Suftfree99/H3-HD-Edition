@@ -27,9 +27,9 @@
 		"index": 0
 	},
 	
-	"mod_version": "0.7.7.3",
+	"mod_version": "0.7.7.5",
 	
-	"priority": 10,
+	"priority": 5,
 	
 	"compatibility": {
 		"class": "all",
