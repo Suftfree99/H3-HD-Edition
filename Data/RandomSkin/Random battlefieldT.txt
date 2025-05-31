@@ -46,4 +46,3 @@ SGTWBA_4.pcx
 SGTWBA_5.pcx
 SGTWBA_6.pcx
 SGTWBA_7.pcx
-SGTWBA_8.pcx
