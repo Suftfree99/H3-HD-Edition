@@ -5,6 +5,9 @@ SGDNBACK.pcx
 SGDNBA_1.pcx
 SGDNBA_2.pcx
 SGDNBA_3.pcx
+SGDNBA_4.pcx
+SGDNBA_5.pcx
+SGDNBA_6.pcx
 *
 SgElBack.pcx
 SgElBa_1.pcx
@@ -27,6 +30,8 @@ SGNCBACK.pcx
 SGNCBA_1.pcx
 SGNCBA_2.pcx
 SGNCBA_3.pcx
+SGNCBA_4.pcx
+SGNCBA_5.pcx
 *
 SGRMBACK.pcx
 SgElBa_1.pcx
