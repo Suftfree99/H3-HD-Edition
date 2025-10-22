@@ -1,8 +1,8 @@
 {
 	"caption": {
 		"Cn_Simp": "",
-		"en_US": "HD Edition Remaster by community",
-		"ru_RU": "HD Edition Remaster by community"
+		"en_US": "HD Remaster by community",
+		"ru_RU": "HD Remaster by community"
 	},
 	
 	"description": {
@@ -27,7 +27,7 @@
 		"index": 0
 	},
 	
-	"mod_version": "0.7.8.1",
+	"mod_version": "0.8.4",
 	
 	"priority": 1,
 	
