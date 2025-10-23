@@ -6,7 +6,7 @@ WoG Graphics Fix is ​​now built in (over 500 new objects on the adventure ma
 - Scripts for improved AI and a script for slightly more complicated battles with neutrals. (there are instructions on how to remove them).
 - 74 additional tracks from 3DO (1-4 Heroes parts). ///
 Attention!! The latest version of ERA (build) or version no earlier than 3.8.0 is desirable and disable the Random wallpaper mod.
-/// It is advisable to put filters Hd mod - SmoothSal x2 + linear sharper. 1280x720 - F4 will expand the game to full screen with a upscale.
+/// It is advisable to put filters Hd mod - SmoothSal x2 + linear sharper. 1425x802 - F4 will expand the game to full screen with a upscale.
 The mod's home page: http://wforum.heroes35.net/showthread.php?tid=5821&page=1
 You can enable the desired localization (ENG-RU) by deleting the archive from Ru or ENG along the way
 HD Edition+fix+ai (ENG-RU)\Data H3HDlocalization RU-ENG.
