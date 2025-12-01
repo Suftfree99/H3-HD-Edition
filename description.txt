@@ -6,7 +6,7 @@ WoG Graphics Fix (SD Quality) is ​​now built in (over 500 new objects on the
 - Scripts for improved AI and a script for slightly more complicated battles with neutrals. (there are instructions on how to remove them).
 - 74 additional tracks from 3DO (1-4 Heroes parts). ///
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
-- For the strong - 1507x848 - Brz x4 + linear sharper.
+- For the strong - 1507x848 - Brz x3-4 + linear sharper.
 - F4 will expand the game to full screen.
 Attention!! The latest version of ERA (build) or version no earlier than 3.8.0 is desirable and disable the Random wallpaper mod.
 /// It is advisable to put filters Hd mod - SmoothSal x2 + linear sharper. 1425x802 - F4 will expand the game to full screen with a upscale.
