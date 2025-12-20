@@ -5,11 +5,11 @@ WoG Graphics Fix (SD Quality) is ​​now built in (over 500 new objects on the
 - Basic archive with textures, interface, adventure map models, bug fixes, HD pairing (upscale), interface elements including localization.
 - Scripts for improved AI and a script for slightly more complicated battles with neutrals. (there are instructions on how to remove them).
 - 74 additional tracks from 3DO (1-4 Heroes parts). ///
+/// It is advisable to put filters Hd mod - 
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
 - For the strong - 1507x848 - Brz x3-4 + linear sharper.
-- F4 will expand the game to full screen.
+- F4 will expand the game to full screen with a upscale.
 Attention!! The latest version of ERA (build) or version no earlier than 3.8.0 is desirable and disable the Random wallpaper mod.
-/// It is advisable to put filters Hd mod - SmoothSal x2 + linear sharper. 1425x802 - F4 will expand the game to full screen with a upscale.
 The mod's home page: http://wforum.heroes35.net/showthread.php?tid=5821&page=1
 You can enable the desired localization (ENG-RU) by deleting the archive from Ru or ENG along the way
 HD Edition+fix+ai (ENG-RU)\Data H3HDlocalization RU-ENG.
