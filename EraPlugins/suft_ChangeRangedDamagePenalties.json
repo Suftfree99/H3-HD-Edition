@@ -1,0 +1,12 @@
+{
+    "suft": {
+        "combat": {
+            "ranged": {
+                "penalties": {
+                    "distance": 0.4,
+                    "obstacle": 0.4
+                }
+            }
+        }
+    }
+}
