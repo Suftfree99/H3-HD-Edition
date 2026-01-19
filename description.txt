@@ -1,5 +1,6 @@
 Mod for 32-bit graphics from the HD Edition remaster + fixes + AI
 /// Detailed information about the mod:
+- Fixed the flags of the objects
 - Video menu
 - Significantly improved picture quality since version 9.0.
 - A new balance of creatures.
