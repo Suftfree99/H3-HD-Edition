@@ -1,10 +1,9 @@
-Mod for 32-bit graphics from the HD Edition remaster + fixes + AI
-/// It is advisable to put filters Hd mod - 
-- A resolution less than 1507x848 will give a fuzzy, soapy image.
+Mod for graphics from HD Edition + fixes + AI
+/// Detailed information about the mod:
+/// It is advisable to install Hd mod filters - A resolution less than 1507x848 will give a fuzzy, soapy picture.
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
-- For the strong - 1507x848 - Brz x3-4 + linear sharper.
-- F4 will expand the game to full screen with a upscale.
-Attention!! The latest version of ERA (build) or version no earlier than 3.8.0 is desirable and disable the Random wallpaper mod.
-The mod's home page: http://wforum.heroes35.net/showthread.php?tid=5821&page=1
-You can enable the desired localization (ENG-RU) by deleting the archive from Ru or ENG along the way
+- For strong - 1507x848 - Brz x3-4 + linear sharper.
+- F4 will expand the game to full screen with upscale.
+The mod's homepage: http://wforum.heroes35.net/showthread.php?tid=5821&page=1
+You can enable the desired localization (ENG-RU) by deleting the archive from Ru or ENG along the way.
 HD Edition+fix+ai (ENG-RU)\Data H3HDlocalization RU-ENG.
