@@ -1,8 +1,8 @@
 {
 	"caption": {
 		"Cn_Simp": "",
-		"en_US": "HD Edition (ENG-RU)",
-		"ru_RU": "HD Edition (ENG-RU)"
+		"en_US": "HD Edition Clean",
+		"ru_RU": "HD Edition Clean"
 	},
 	
 	"description": {
@@ -27,7 +27,7 @@
 		"index": 0
 	},
 	
-	"mod_version": "0.9.3.1",
+	"mod_version": "0.9.3.2",
 	
 	"priority": 1,
 	
@@ -39,5 +39,5 @@
 	"platform": "era",
 	"info_version": "3.3.x",
 	"plugins": {},
-	"category": "gameplay"
+	"category": "graphics"
 }

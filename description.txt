@@ -1,14 +1,4 @@
 Mod for 32-bit graphics from the HD Edition remaster + fixes + AI
-/// Detailed information about the mod:
-- Fixed the flags of the objects
-- Video menu
-- Significantly improved picture quality since version 9.0.
-- A new balance of creatures.
-WoG Graphics Fix (SD Quality) is ​​now built in (over 500 new objects on the adventure map).
-- A mod that expands the number of battlefields to 327 variations of the battlefield in HD quality. 157 of them are mirror images of fields. (To work, you need to enable the script for new battlefields).
-- Basic archive with textures, interface, adventure map models, bug fixes, HD pairing (upscale), interface elements including localization.
-- Scripts for improved AI and a script for slightly more complicated battles with neutrals. (there are instructions on how to remove them).
-- 74 additional tracks from 3DO (1-4 Heroes parts). ///
 /// It is advisable to put filters Hd mod - 
 - A resolution less than 1507x848 will give a fuzzy, soapy image.
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
