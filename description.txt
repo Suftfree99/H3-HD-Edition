@@ -1,4 +1,4 @@
-Mod for graphics from HD Edition.
+A mod for 32-bit HD graphics with AI.
 /// Detailed information about the mod:
 /// It is advisable to install Hd mod filters - A resolution less than 1507x848 will give a fuzzy, soapy picture.
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
