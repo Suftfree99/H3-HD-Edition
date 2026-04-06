@@ -1,0 +1,135 @@
+ZVSE2
+
+
+
+*#DC(GEM_COMBAT_DLG_HP_LABEL_HEIGHT) = 4;
+*#DC(GEM_COMBAT_DLG_HP_LABEL_FILL) = 1053609165; 0.4
+*#DC(GEM_COMBAT_DLG_HP_LABEL_LOSS) = 1064933786; 0.975
+*#DC(GEM_COMBAT_DLG_HP_LABEL_SATURATION) = 1061997773; 0.8 idk.mb set 1
+
+*!SN:L A E;
+
+!?FU(gem_CreateERMHook);
+
+!!SN:Ex1/1/5439140/(gem_CreatureCreateRmc);
+!!SN:Ex1/1/5439587/(gem_CreatureCreateRmcAfterAddingText);
+!?FU(gem_CreatureCreateRmcAfterAddingText);
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EBP)/4/?(ebp:y) C(ebp:y)/-16/4/?(dlg:y);
+!!FU(gem_DlgItem_Position):P1001/?y99/d55/(FALSE)/(dlg);
+!!UN:C5439855/1/4/185;
+!?FU(gem_CreatureCreateRmc);
+!!UN:C6768560/4/?(monTable:y); C(monTabelPtr)/4/?(monTable:y);
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EBP)/4/?(ebp:y) C(ebp:y)/12/4/?(monId:y) C(ebp:y)/-16/4/?(dlg:y);
+
+!!UN:C6991128/4/?(palette:y);
+!!VR(offset:y):S2*31 +28;
+!!UN:C(palette)/(offset)/2/?(color:y);
+
+!!VR(x:y):S78;
+!!VR(y:y):S26;
+
+!!VR(zVarAddr:y):S9598952;
+!!SN:E4521472/(CALLCONV_THISCALL)/(zVarAddr:y)/(x)/(y)/104/134/998/(color)/1024;           [create dlgFrame]
+!!SN:E6287984/(CALLCONV_THISCALL)/(dlg:y)/(zVarAddr:y)/-1;                                 [add item to dlg list]
+
+!!MA:O(monId)/?(faction:y);
+!!VR(offset:y):S(faction) *4;
+!!UN:C6826336/(offset)/4/?(bgPtr:y);
+!!VR(x):+2;
+!!VR(y):+2;
+
+!!VR(zVarAddr:y):+512;
+!!SN:E4521888/(CALLCONV_THISCALL)/(zVarAddr:y)/(x)/(y)/100/130/999/(bgPtr)/2048;           [create bg picture]
+*!UN:C(zVarAddr)/48/4/?
+
+!!SN:E6287984/(CALLCONV_THISCALL)/(dlg:y)/(zVarAddr:y)/-1;                                 [ad bg picture]
+
+
+!!VR(offset:y):S(monId) *116 +12;
+!!UN:C(monTable)/(offset)/4/?(defNamePtr:y); 
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_ECX)/4/?(dlgDef:y);
+!!SN:E5154816/(CALLCONV_THISCALL)/(dlgDef)/(x)/(y)/100/130/1000/(defNamePtr:y)/0/2/0/0/18; [create creature picture]
+
+!!SN:X?y99/0;
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/5439145;
+
+*?FU(OnAdventureMapRightMouseClick)&i^key_shift^;
+
+*?FU(gem_CreateERMHook);
+*!SN:Ex1/1/5183067/(gem_MsgBoxDlgProc);
+*?FU(gem_MsgBoxDlgProc);
+*!UN:C(WND_MANAGER)/4/?(wndMan:y) C(wndMan)/56/4/?(itemId:y);
+*?FU(gem_CreateERMHook);
+*!SN:Ex1/1/4790692/(gem_OnScuttleBoatDlgProc);
+*!SN:Ex1/1/4313205/(gem_OnScuttleBoatTryToRemove);
+*!SN:Ex1/1/4313245/(gem_OnScuttleBoatTryToJumpX);
+*!SN:Ex1/1/4313453/(gem_OnScuttleBoatRemove);
+*!SS(SPELL_REMOVE_OBSTACLE):Fd|2;
+*!SS(SPELL_FORCE_FIELD):Fd|2;
+*!VRi^gem_spell_%(SPELL_REMOVE_OBSTACLE)_cost^:S5;
+*!VRi^gem_spell_%(SPELL_FORCE_FIELD)_cost^:S10;
+
+*?FU(gem_OnScuttleBoatDlgProc)&i^gem_adventure_spell^;
+*!UN:Cx1/(STRUCT_HOOK_CONTEXT_EAX)/4/?(mapitem:y) C(mapitem)/30/4/?t;
+*!if&t>113/t<212/i^gem_adventure_spell^=(SPELL_REMOVE_OBSTACLE);
+  *!SN:X?y99/0;
+  *!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4790704;
+*!el&i^gem_adventure_spell^=(SPELL_FORCE_FIELD)/t=0;
+  *!SN:X?y99/0;
+  *!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4790704;
+*!en;
+  *!UN:C4790710/1/1/3;
+
+*?FU(gem_OnScuttleBoatTryToRemove)&i^gem_adventure_spell^;
+  
+  *!UN:C4790710/1/1/1;                  [restore the cursor type]
+
+  *!UN:Cx1/(STRUCT_HOOK_CONTEXT_EAX)/4/?(coords:y) C(coords)/4/?(coords);
+  *!SN:E7413577/1/?(x:y)/?(y:y)/?(z:y)/(coords);
+  *!SN:X?y99/0;
+  *!VR(spellId:y):Si^gem_adventure_spell^;
+  *!if&i^gem_adventure_spell^=(SPELL_REMOVE_OBSTACLE);
+    *!UN:C8943208/2/(x) C8943208/2/2/(y); C8943208/4/2/(z);
+    *!UN:O(x)/(y)/(z)/1/1;
+    *!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4313245;      [jump to screen adv map coord get]
+  *!el;
+    *!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4313597;      [jump to screen adv map coord get]
+    *!UN:I(x)/(y)/(z)/(OBJ_MONOLITH_TWO_WAY)/0/1;
+    *!VRi^gem_adventure_spell^:S(NULL);
+    *!SN:P^TELPTOUT^;
+  *!en;
+  *!OW:R(CURRENT_PLAYER)/(RES_MITHRIL)/d-i^gem_spell_%(spellId)_cost^;
+  *!SN:D;
+    *!UN:R2 R5/1/0;
+
+*?FU(gem_OnScuttleBoatTryToJumpX)&i^gem_adventure_spell^=(SPELL_REMOVE_OBSTACLE);/i^gen_allow_boat_action^;
+*!UN:Cx1/(STRUCT_HOOK_CONTEXT_EDI)/4/8943208;
+
+*?FU(gem_OnScuttleBoatRemove)&i^gem_adventure_spell^=(SPELL_REMOVE_OBSTACLE);/i^gen_allow_boat_action^;
+*!SN:X?y99/0;
+*!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4313597; jump to screen adv map coord get
+*!VRi^gem_adventure_spell^:S0;
+
+*?FU(OnAfterAdventureMagic)|v997=(SPELL_REMOVE_OBSTACLE)/v997=(SPELL_FORCE_FIELD);
+*!IF:L^%v997^;
+*!if&v997=(SPELL_REMOVE_OBSTACLE);
+*!OW:R(CURRENT_PLAYER)/(RES_MITHRIL)/?(mith:y);
+*!if&(mith)>=i^gem_spell_%v997_cost^;
+  *!VRi^gem_adventure_spell^:Sv997;
+  *!UN:C(ADV_MANAGER)/4/?(advMgr:y);
+  *!SN:E4312944/(CALLCONV_THISCALL)/(advMgr)/3;
+  *!VRi^gem_adventure_spell^:S0;
+*!en;
+
+*!el&v997=(SPELL_FORCE_FIELD);
+
+*!en;
+
+!?FU(OnKeyPressed_AdvMap)&x1=(KEY_Q);
+*!IF:M^ ^;
+*!IF:M^{~>AVAdlic0.def:0:0}^;
+*!SN:L^NewAdvDlgItems.era^/?(pluginAddress:y);
+*!IF:L^%^;
+*!if&(pluginAddress);
+  *!SN:A(pluginAddress)/^addNotification^/?(addNotify:y) E(addNotify)/(CALLCONV_CDECL)/0/^iOkay2.def^/0/0;
+*!en;
