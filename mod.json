@@ -32,8 +32,12 @@
 	"priority": 1,
 	
 	"compatibility": {
-		"class": "all",
-		"entries": {}
+    "incompatible": [
+    "Random wallpaper menu",
+	"Enhanced Henchmen",
+	"More Battlefields",
+	"Vivid Dwelling Battlefields",
+    ]
 	},
 	
 	"platform": "era",
