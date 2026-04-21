@@ -22,7 +22,7 @@
         "file": "icon.ico",
         "index": 0
     },
-    "mod_version": "0.9.5.2",
+    "mod_version": "0.9.5.3",
     "priority": 1,
     "compatibility": {
         "incompatible": [
