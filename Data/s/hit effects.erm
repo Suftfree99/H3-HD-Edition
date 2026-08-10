@@ -1,0 +1,155 @@
+ZVSE2
+
+; This plugin allows to play a def animation and sound whenever you land a shot or hit on some stack, simultaneously with its hit/defend animation.
+; It is bound to creature ID, not projectile type, so if you have more creatures in your mod using same projectiles as the ones listed below - add them manually.
+; Make sure to change the commander bursts if you use custom projectiles for them.
+
+!#VRs^HitEffects.Melee.%(MON_MONK)^:S^Burst01.def^;                     Monk
+!#SN:W^HitEffects.Shot.%(MON_MONK)^/^Burst02.def^;
+!#SN:W^HitEffects.ShotSound.%(MON_MONK)^/^MONKATTK.wav^; 
+!#SN:W^HitEffects.Shot.%(MON_ZEALOT)^/^Burst02.def^;                    Zealot
+!#VRs^HitEffects.Melee.%(MON_ZEALOT)^:S^Burst01.def^; 
+!#VRs^HitEffects.Melee.%(MON_ANGEL)^:S^Burst03.def^;                    Angel
+!#VRs^HitEffects.Melee.%(MON_ARCHANGEL)^:S^Burst04.def^;                Archangel
+!#VRs^HitEffects.MeleeSound.%(MON_ARCHANGEL)^:S^PHOEMOVE.wav^;
+!#VRs^HitEffects.Melee.%(MON_SUPREME_ARCHANGEL)^:S^Burst04.def^;        Supreme Archangel
+!#VRs^HitEffects.MeleeSound.%(MON_SUPREME_ARCHANGEL)^:S^PHOEMOVE.wav^;
+!#VRs^HitEffects.Melee.%(MON_UNICORN)^:S^Burst05.def^;                  Unicorn
+!#VRs^HitEffects.Melee.%(MON_WAR_UNICORN)^:S^Burst06.def^;              War Unicorn
+!#SN:W^HitEffects.Shot.%(MON_MAGE)^/^Burst07.def^;                      Mage
+!#SN:W^HitEffects.Shot.%(MON_ARCH_MAGE)^/^Burst08.def^;                 Arch Mage
+!#SN:W^HitEffects.ShotSound.%(MON_ARCH_MAGE)^/^NOSFSHOT.wav^;
+!#VRs^HitEffects.Melee.%(MON_GENIE)^:S^Burst09.def^;                    Genie
+!#VRs^HitEffects.Melee.%(MON_MASTER_GENIE)^:S^Burst09.def^;             Master Genie
+!#VRs^HitEffects.Melee.%(MON_GIANT)^:S^Burst10.def^;                    Giant
+!#VRs^HitEffects.MeleeSound.%(MON_GIANT)^:S^GOGFLAME.wav^;
+!#VRs^HitEffects.Melee.%(MON_TITAN)^:S^Burst10.def^;                    Titan
+!#VRs^HitEffects.MeleeSound.%(MON_TITAN)^:S^GOGFLAME.wav^;
+!#SN:W^HitEffects.Shot.%(MON_TITAN)^/^Burst11.def^;
+!#VRs^HitEffects.Melee.%(MON_LORD_OF_THUNDER)^:S^Burst10.def^;          Lord of Thunder
+!#VRs^HitEffects.MeleeSound.%(MON_LORD_OF_THUNDER)^:S^GOGFLAME.wav^;
+!#SN:W^HitEffects.Shot.%(MON_LORD_OF_THUNDER)^/^Burst11.def^;
+!#SN:W^HitEffects.Shot.%(MON_GOG)^/^Burst12.def^;                       Gog
+!#SN:W^HitEffects.ShotSound.%(MON_GOG)^/^PHOEKILL.wav^;
+!#VRs^HitEffects.Melee.%(MON_EFREETI)^:S^Burst13.def^;                  Efreeti
+!#VRs^HitEffects.Melee.%(MON_EFREET_SULTAN)^:S^Burst13.def^;            Efreet Sultan
+!#VRs^HitEffects.Melee.%(MON_ARCH_DEVIL)^:S^Burst14.def^;               Arch Devil
+!#VRs^HitEffects.MeleeSound.%(MON_ARCH_DEVIL)^:S^FAERATTK.wav^;
+!#VRs^HitEffects.Melee.%(MON_HELL_BARON)^:S^Burst14.def^;               Hell Baron
+!#VRs^HitEffects.MeleeSound.%(MON_HELL_BARON)^:S^FAERATTK.wav^;
+!#VRs^HitEffects.Melee.%(MON_WIGHT)^:S^Burst15.def^;                    Wight
+!#VRs^HitEffects.Melee.%(MON_WRAITH)^:S^Burst15.def^;                   Wraith
+!#VRs^HitEffects.Melee.%(MON_GHOST_DRAGON)^:S^Burst16.def^;             Ghost Dragon
+!#SN:W^HitEffects.Shot.%(MON_LICH)^/^Burst17.def^;                      Lich
+!#SN:W^HitEffects.ShotSound.%(MON_LICH)^/^DEATHCLS.wav^;
+!#VRs^HitEffects.Melee.%(MON_BEHOLDER)^:S^Burst18.def^;                 Beholder
+!#SN:W^HitEffects.Shot.%(MON_BEHOLDER)^/^Burst19.def^;
+!#SN:W^HitEffects.Shot.%(MON_EVIL_EYE)^/^Burst20.def^;                  Evil Eye
+!#VRs^HitEffects.Melee.%(MON_EVIL_EYE)^:S^Burst18.def^;
+!#VRs^HitEffects.Melee.%(MON_THUNDERBIRD)^:S^Burst21.def^;              Thunderbird
+!#VRs^HitEffects.MeleeSound.%(MON_THUNDERBIRD)^:S^CALFSHOT.wav^;
+!#SN:W^HitEffects.Shot.%(MON_CYCLOPS)^/^Burst22.def^;                   Cyclops
+!#SN:W^HitEffects.ShotSound.%(MON_CYCLOPS)^/^WALLMISS.wav^;
+!#SN:W^HitEffects.Shot.%(MON_CYCLOPS_KING)^/^Burst22.def^;              Cyclops King
+!#SN:W^HitEffects.ShotSound.%(MON_CYCLOPS_KING)^/^WALLMISS.wav^;
+!#VRs^HitEffects.Melee.%(MON_GHOST_BEHEMOTH)^:S^Burst23.def^;           Ghost Behemoth
+!#VRs^HitEffects.Melee.%(MON_DRAGON_FLY)^:S^Burst24.def^;               Dragon Fly
+!#VRs^HitEffects.Melee.%(MON_GORGON)^:S^Burst25.def^;                   Gorgon
+!#VRs^HitEffects.Melee.%(MON_MIGHTY_GORGON)^:S^Burst26.def^;            Mighty Gorgon
+!#VRs^HitEffects.Melee.%(MON_PIXIE)^:S^Burst27.def^;                    Pixie
+!#VRs^HitEffects.Melee.%(MON_SPRITE)^:S^Burst28.def^;                   Sprite
+!#VRs^HitEffects.Melee.%(MON_AIR_ELEMENTAL)^:S^Burst29.def^;            Air Elemental
+!#VRs^HitEffects.Melee.%(MON_STORM_ELEMENTAL)^:S^Burst30.def^;          Storm Elemental
+!#VRs^HitEffects.MeleeSound.%(MON_STORM_ELEMENTAL)^:S^AELMATTK.wav^;
+!#SN:W^HitEffects.Shot.%(MON_STORM_ELEMENTAL)^/^Burst31.def^;
+!#SN:W^HitEffects.Shot.%(MON_ICE_ELEMENTAL)^/^Burst32.def^;             Ice Elemental
+!#SN:W^HitEffects.ShotSound.%(MON_ICE_ELEMENTAL)^/^BMTHKILL.wav^;
+!#VRs^HitEffects.Melee.%(MON_FIRE_ELEMENTAL)^:S^Burst33.def^;           Fire Elemental
+!#VRs^HitEffects.Melee.%(MON_ENERGY_ELEMENTAL)^:S^Burst34.def^;         Energy Elemental
+!#VRs^HitEffects.Melee.%(MON_CRYSTAL_DRAGON)^:S^Burst35.def^;           Crystal Dragon
+!#SN:W^HitEffects.Shot.%(MON_ENCHANTER)^/^C20SPX.def^;                  Enchanter
+!#SN:W^HitEffects.ShotSound.%(MON_ENCHANTER)^/^MAGICBLT.wav^;
+!#VRs^HitEffects.Melee.%(MON_GHOST)^:S^Burst36.def^;                    Ghost
+!#SN:W^HitEffects.Shot.%(MON_WAR_ZEALOT)^/^Burst37.def^;                War Zealot
+!#SN:W^HitEffects.ShotSound.%(MON_WAR_ZEALOT)^/^FIREBALL.wav^;
+!#VRs^HitEffects.Melee.%(MON_WAR_ZEALOT)^:S^Burst01.def^;
+!#SN:W^HitEffects.Shot.%(MON_ARCTIC_SHARPSHOOTER)^/^Burst38.def^;       Arctic Sharpshooter
+!#SN:W^HitEffects.ShotSound.%(MON_ARCTIC_SHARPSHOOTER)^/^COLDRING.wav^; 
+!#SN:W^HitEffects.Shot.%(MON_LAVA_SHARPSHOOTER)^/^Burst39.def^;         Lava Sharpshooter
+!#SN:W^HitEffects.ShotSound.%(MON_LAVA_SHARPSHOOTER)^/^FELMDFND.wav^; 
+!#VRs^HitEffects.Melee.%(MON_SANTA_GREMLIN)^:S^Burst40.def^;            Santa Gremlin
+!#VRs^HitEffects.MeleeSound.%(MON_SANTA_GREMLIN)^:S^FIREBLST.wav^;
+!#SN:W^HitEffects.Shot.%(MON_SORCERESS)^/^Burst41.def^;                 Sorceress
+!#SN:W^HitEffects.ShotSound.%(MON_SORCERESS)^/^ESULSHOT.wav^; 
+!#VRs^HitEffects.Melee.%(MON_SORCERESS)^:S^Burst42.def^;
+!#VRs^HitEffects.Melee.%(MON_WEREWOLF)^:S^Burst43.def^;                 Werewolf
+
+!#SN:W^HitEffects.Shot.175^/^Burst44.def^;                              Rampart Commander 1
+!#SN:W^HitEffects.ShotSound.175^/^GOGFIREB.wav^; 
+!#VRs^HitEffects.Melee.175^:S^Burst45.def^;
+!#SN:W^HitEffects.Shot.184^/^Burst44.def^;                              Rampart Commander 2
+!#SN:W^HitEffects.ShotSound.184^/^GOGFIREB.wav^;
+!#VRs^HitEffects.Melee.184^:S^Burst45.def^;
+!#SN:W^HitEffects.Shot.177^/^Burst46.def^;                              Inferno Commander 1
+!#SN:W^HitEffects.ShotSound.177^/^GODRATTK.wav^; 
+!#VRs^HitEffects.Melee.177^:S^Burst47.def^;
+!#VRs^HitEffects.MeleeSound.177^:S^BGORATTK.wav^;
+!#SN:W^HitEffects.Shot.186^/^Burst46.def^;                              Inferno Commander 2
+!#SN:W^HitEffects.ShotSound.186^/^GODRATTK.wav^;
+!#VRs^HitEffects.Melee.186^:S^Burst47.def^;
+!#VRs^HitEffects.MeleeSound.186^:S^BGORATTK.wav^;
+!#SN:W^HitEffects.Shot.178^/^Burst48.def^;                              Necropolis Commander 1
+!#SN:W^HitEffects.ShotSound.178^/^WUNCSHOT.wav^;
+!#SN:W^HitEffects.Shot.187^/^Burst48.def^;                              Necropolis Commander 2
+!#SN:W^HitEffects.ShotSound.187^/^WUNCSHOT.wav^;
+!#SN:W^HitEffects.Shot.179^/^Burst49.def^;                              Dungeon Commander 1
+!#SN:W^HitEffects.ShotSound.179^/^PHOEWNCE.wav^; 
+!#SN:W^HitEffects.Shot.188^/^Burst49.def^;                              Dungeon Commander 2
+!#SN:W^HitEffects.ShotSound.188^/^PHOEWNCE.wav^; 
+!#SN:W^HitEffects.Shot.181^/^Burst50.def^;                              Fortress Commander 1
+!#SN:W^HitEffects.ShotSound.181^/^PHOEKILL.wav^; 
+!#SN:W^HitEffects.Shot.190^/^Burst50.def^;                              Fortress Commander 2
+!#SN:W^HitEffects.ShotSound.190^/^PHOEKILL.wav^; 
+!#SN:W^HitEffects.Shot.182^/^Burst51.def^;                              Conflux Commander 1
+!#SN:W^HitEffects.ShotSound.182^/^GENISHOT.wav^; 
+!#VRs^HitEffects.Melee.182^:S^Burst52.def^;
+!#SN:W^HitEffects.Shot.191^/^Burst51.def^;                              Conflux Commander 2
+!#SN:W^HitEffects.ShotSound.191^/^GENISHOT.wav^;
+!#VRs^HitEffects.Melee.191^:S^Burst52.def^;
+
+
+; This part allows to have damage resistance/vulnerability witout touching amethyst fields in order
+; to avoid issues with hit effects plugin. Moreover, with this workaround the battle hint from amethyst
+; which shows estimated losses from attack now displays correct damage values with resistance applied.
+
+// Melee damage resistances
+!?FU(GetMonMeleeResistance);
+!#VA(mon:x) (dmgReduction:x);
+
+!!VR(dmgReduction):S0; examples (uncomment to take effect)
+;!VR(dmgReduction)&(mon)=(MON_DIAMOND_GOLEM):S-35; [35% melee damage vulnerability]
+;!VR(dmgReduction)&(mon)=(MON_GOLD_GOLEM):S70; [70% melee damage resistance]
+
+// Ranged damage resistances
+!?FU(GetMonShootingResistance);
+!#VA(mon:x) (dmgReduction:x);
+
+!!VR(dmgReduction):S0; examples (uncomment to take effect)
+;!VR(dmgReduction)&(mon)=(MON_DIAMOND_GOLEM):S-35; [35% ranged damage vulnerability]
+;!VR(dmgReduction)&(mon)=(MON_GOLD_GOLEM):S70; [70% ranged damage resistance]
+
+!?FU(OnStackToStackDamage);
+!#VA(atkStack:x) (defStack:x) (finalDmgConst:x) (finalDmg:x) (basicDmg:x) (dmgBonus:x) (isDistant:x) (distanceArg:x) (isTheoretical:x);
+
+!!BM(defStack):T?(mon:y);
+
+; Applying damage factors
+!!VR(dmgReduction:y):S0;
+!!FU(GetMonMeleeResistance):P(mon)/?(dmgReduction);
+!!FU(GetMonShootingResistance)&x7:P(mon)/?(dmgReduction);
+
+!!if&(dmgReduction)>0;
+  !!VR(reducedDmg:y):S(finalDmgConst) *(dmgReduction) :100;
+  !!VR(newFinalDmg:y):S(finalDmg) -(reducedDmg);
+  !!VR(finalDmg)&(finalDmg)>(newFinalDmg):S(newFinalDmg);
+!!en;
