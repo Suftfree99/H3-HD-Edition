@@ -4,6 +4,9 @@ A mod for 32-bit HD graphics with AI.
 - For a weak graphics card - 1507x848 - SmoothSal x2 + linear sharper.
 - For strong - 1507x848 - Brz x3-4 + linear sharper.
 - F4 will expand the game to full screen with upscale.
+/// 3-4K HD_Launcher monitors.
+The resolution 1792x1008.
+- xBRZ 2-4 + linear sharper.
 The mod's homepage: http://wforum.heroes35.net/showthread.php?tid=5821&page=1
 You can enable the desired localization (ENG-RU) by deleting the archive from Ru or ENG along the way.
 HD Edition+fix+ai (ENG-RU)\Data H3HDlocalization RU-ENG.
